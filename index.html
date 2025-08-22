@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="expense-tracker">
+        <div class="container">
+            <h1>Expense Tracker</h1>
+
+            <section class="summary">
+            <div>Balance: <span id="balance">₹0</span></div>
+            <div>Income: <span id="income">₹0</span></div>
+            <div>Expense: <span id="expense">₹0</span></div>
+            </section>
+
+            <section class="form">
+                <form id="tx-form">
+                    <input id="title" placeholder="Title" required>
+                    <input id="amount" type="number" step="0.01" placeholder="Amount" required>
+                    <select id="category">
+                        <option value="food">Food</option>
+                        <option value="travel">Travel</option>
+                        <option value="bills">Bills</option>
+                        <option value="salary">salary</option>
+                    </select>
+                    <input id="date" type="date">
+                    <div class="radio-group">
+                    <label><input type="radio" name="type" value="income" checked>Income</label>
+                    <label><input type="radio" name="type" value="expense"> Expense</label>
+                    </div>
+                    <button type="submit">Add</button>
+                </form>
+            </section>
+
+            <section id="filters">
+                <select id="typeFilter">
+                    <option value="all">All</option>
+                    <option value="income">income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <select id="catFilter">
+                    <option value="all">All Categories</option>
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                    <option value="bills">Bills</option>
+                    <option value="salary">salary</option>
+                </select>
+            </section>
+
+            <section id="transactions-section">
+                <h2>Transactions</h2>
+                <ul id="tx-list"></ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
+
+
